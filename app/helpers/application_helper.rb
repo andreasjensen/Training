@@ -11,6 +11,18 @@ module ApplicationHelper
   end
 
   def logo
-      image_tag("logo.png", :alt => "Sample App", :class => "round")
+      image_tag("logo.png")
     end
+    
+    def facebook
+        image_tag("facebook_32.png")
+      end
+      
+      def twitter
+          image_tag("twitter_32.png")
+        end
+        
+        def youtube
+            image_tag("youtube_32.png")
+          end
   end
