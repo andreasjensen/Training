@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_filter :admin_user,   :only => :destroy
 
   def index
-      @title = "All users"
+      @title = "Alle brugere"
       @users = User.paginate(:page => params[:page])
     end
     
@@ -18,21 +18,21 @@ class UsersController < ApplicationController
   
   def new
       @user = User.new
-      @title = "Sign up"
+      @title = "new"
   end
    
    def edit
        @user = User.find(params[:id])
-       @title = "Edit user"
+       @title = "Rediger"
    end
    
     def update
         @user = User.find(params[:id])
         if @user.update_attributes(params[:user])
-          flash[:success] = "Profile updated."
+          flash[:success] = "Opdateret."
           redirect_to @user
         else
-          @title = "Edit user"
+          @title = "Rediger"
           render 'edit'
         end
       end
@@ -41,17 +41,17 @@ class UsersController < ApplicationController
            @user = User.new(params[:user])
            if @user.save
              sign_in @user
-             flash[:success] = "Welcome to the Sample App!"
+             flash[:success] = "Velkommen til din træningsdagbog!"
              redirect_to @user
            else
-             @title = "Sign up"
+             @title = "Tilmeld"
              render 'new'
            end
          end
    
          def destroy
              User.find(params[:id]).destroy
-             flash[:success] = "User destroyed."
+             flash[:success] = "Bruger slettet"
              redirect_to users_path
            end
 

@@ -30,7 +30,7 @@ module SessionsHelper
 
         def deny_access
           store_location
-          redirect_to signin_path, :notice => "Please sign in to access this page."
+          redirect_to signin_path, :notice => "Log ind for at få adgang til denne side."
         end
         
 
@@ -41,7 +41,7 @@ module SessionsHelper
 
         private
     def deny_access
-        redirect_to signin_path, :notice => "Please sign in to access this page."
+        redirect_to signin_path, :notice => "Log ind for at få adgang til denne side."
       end
   
   def user_from_remember_token
