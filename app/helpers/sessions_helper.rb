@@ -40,6 +40,7 @@ module SessionsHelper
         end
 
         private
+        
     def deny_access
         redirect_to signin_path, :notice => "Log ind for at få adgang til denne side."
       end
