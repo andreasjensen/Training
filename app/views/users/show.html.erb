@@ -7,9 +7,9 @@
       </h1>
     </td>
 	<td class="sidebar round">
-	  <strong>Name</strong> <%= @user.name %><br />
-	  <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
-	  <strong>Microposts</strong> <%= @user.microposts.count %>
+	  <strong>Navn</strong> <%= @user.name %><br />
+	  <strong>Link</strong> <%= link_to user_path(@user), @user %><br />
+	  <strong>Indlæg</strong> <%= @user.microposts.count %>
 	</td>
 
 	<% unless @user.microposts.empty? %>
