@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   if user.nil?
         flash.now[:error] = "Dette giver ikke adgang til kontoen."
         @title = "Log ind"
-        render 'ny'
+        render 'new'
   else
         sign_in user
         redirect_back_or user
